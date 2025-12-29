@@ -8,9 +8,10 @@ RSpec.describe 'Stock Data' do
   }}
 
   it 'returns the correct stock information for a given symbol' do
-    name = get_stock_data('CHWY', stock_data)
-    expect(name).to eq("Chewy, Inc.")
-    expect(price).to eq(32.00)
+    result = get_stock_data('CHWY', stock_data)
+
+    expect(result[:name]).to eq("Chewy, Inc.")
+    expect(result[:price]).to eq(32.00)
   end
 
   it 'returns error when invalid symbol is submitted' do

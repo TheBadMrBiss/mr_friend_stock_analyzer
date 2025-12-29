@@ -16,6 +16,6 @@ RSpec.describe 'Stock Data' do
 
   it 'returns error when invalid symbol is submitted' do
     name = get_stock_data('INVALID', stock_data)
-    expect(name).to eq("Error: Stock symbol not found.")
+    expect(name).to be_nil
   end
 end

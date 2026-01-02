@@ -18,7 +18,7 @@ if __FILE__ == $0
     result = get_stock_data(input, STOCK_DATABASE)
 
     if result
-      puts "Stock Name: #{result[:name]}, Price: #{result[:price]}"
+      puts "Stock Name: #{result[:name]}, Price: #{result[:price]}, P/E Ratio: #{result[:pe]}, EPS: #{result[:eps]}"
           # Break after input for now
           break
     else

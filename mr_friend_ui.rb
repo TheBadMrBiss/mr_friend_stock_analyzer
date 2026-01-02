@@ -24,9 +24,13 @@ window('Mr. Friend - Stock Data Retriever', 400, 200) {
         if result
           @name_label.text = "Company Name: #{result[:name]}"
           @price_label.text = "Stock Price: $#{'%.2f' % result[:price]}"
+          @pe_label.text = "P/E Ratio: #{result[:pe]}"
+          @eps_label.text = "EPS: #{result[:eps]}"
         else
           @name_label.text = "Error: Stock symbol not found."
           @price_label.text = ""
+          @pe_label.text = ""
+          @eps_label.text = ""
         end
       end
     }
@@ -40,6 +44,14 @@ window('Mr. Friend - Stock Data Retriever', 400, 200) {
     }
 
     @price_label = label('Price:   ') {
+      stretchy false
+    }
+
+    @pe_label = label('P/E Ratio:   ') {
+      stretchy false
+  }
+
+    @eps_label = label('EPS:   ') {
       stretchy false
     }
   }

@@ -32,10 +32,6 @@ window('Mr. Friend - Stock Data Retriever', 400, 200) {
 
     @stock_symbol_entry = search_entry {
       stretchy false
-
-      on_changed do
-          perform_search
-        end
     }
 
     button('Get Data') {

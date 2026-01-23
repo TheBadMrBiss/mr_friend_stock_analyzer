@@ -7,6 +7,8 @@ class StockAnalyzerTest < ActiveSupport::TestCase
 
     assert_equal "Chewy, Inc.", result[:name]
     assert_equal 32.0, result[:price]
+    assert_equal 45.2, result[:pe]
+    assert_equal 0.71, result[:eps]
   end
 
   test "should return error for unknown symbol" do

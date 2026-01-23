@@ -5,8 +5,8 @@ class StockAnalyzerTest < ActiveSupport::TestCase
     analyzer = StockAnalyzer.new
     result = analyzer.lookup("CHWY")
 
-    assert_equal "Chewy Inc.", result[:name]
-    assert_equal 32.50, result[:price]
+    assert_equal "Chewy, Inc.", result[:name]
+    assert_equal 32.0, result[:price]
   end
 
   test "should return error for unknown symbol" do

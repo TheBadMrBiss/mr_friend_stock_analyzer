@@ -1,0 +1,3 @@
+class StockAnalyzer 
+
+end

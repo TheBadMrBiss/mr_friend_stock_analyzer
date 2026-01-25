@@ -6,7 +6,7 @@ class StockAnalyzer
     'PFE' => { name: "Pfizer Inc.", price: 25.00, pe: 22.5, eps: 1.11 },
   }
 
-  def lookup(symbol)
+  def find_by_symbol(symbol)
     STOCK_DATABASE[symbol.upcase] || { error: "Symbol not found" }
   end
 end

@@ -1,6 +1,6 @@
 class StockLookupController < ApplicationController
-  def lookup
+  def show
     symbol = params[:symbol]
-    @result = StockAnalyzer.new.lookup(symbol)
+    @result = StockAnalyzer.new.find_by_symbol(symbol)
   end
 end

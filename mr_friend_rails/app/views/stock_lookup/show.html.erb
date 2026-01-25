@@ -1,0 +1,10 @@
+<h1>Stock Lookup</h1>
+
+<% if @result[:error] %>
+  <p style="color: red;"><%= @result[:error] %></p>
+<% else %>
+  <p><strong>Name: </strong> <%= @result[:name] %></p>
+  <p><strong>Price: </strong> $<%= @result[:price] %></p>
+  <p><strong>P/E Ratio: </strong> <%= @result[:pe] %></p>
+  <p><strong>EPS: </strong> <%= @result[:eps] %></p>
+<% end %>

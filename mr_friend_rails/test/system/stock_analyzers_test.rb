@@ -2,7 +2,10 @@ require "application_system_test_case"
 
 class StockAnalyzersTest < ApplicationSystemTestCase
   test "visit stock lookup page" do
-    visit "/lookup?symbol=CHWY"
+    visit "/lookup"
+
+    fill_in "ticker_symbol", with: "CHWY"
+    click_on "Search"
   
     assert_selector "h1", text: "Stock Lookup"
     assert_text "Chewy, Inc."

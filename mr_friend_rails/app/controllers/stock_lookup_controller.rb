@@ -1,6 +1,8 @@
 class StockLookupController < ApplicationController
+
   def show
-    symbol = params[:symbol]
-    @result = StockAnalyzer.new.find_by_symbol(symbol)
+    if params[:ticker_symbol].present?
+      @result = StockAnalyzer.new.find_by_symbol(params[:ticker_symbol])
+    end
   end
 end
